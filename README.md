@@ -1,11 +1,11 @@
-# 📦 File Downloader App
+# File Downloader App
 ![CI Tests](https://github.com/otayou/finovox-exercice/actions/workflows/ci.yml/badge.svg)
 
 Une application web légère développée en Flask, permettant de **lister** et **télécharger** des fichiers depuis un dossier monté dynamiquement en volume Docker, avec tests automatisés exécutés via GitHub Actions.
 
 ---
 
-## 🚀 Fonctionnalités
+## Fonctionnalités
 
 - Interface HTML listant les fichiers à télécharger
 - API REST :
@@ -16,7 +16,7 @@ Une application web légère développée en Flask, permettant de **lister** et 
 
 ---
 
-## ⚙️ Installation & Build
+## Installation & Build
 
 Clonez le projet et positionnez-vous à la racine :
 
@@ -33,7 +33,7 @@ docker build -t file-downloader-app .
 
 ---
 
-## ▶️ Lancement de l’application
+## Lancement de l’application
 
 Placez les fichiers que vous voulez rendre téléchargeables dans un dossier local, par exemple `test_folder/`, puis lancez :
 
@@ -55,21 +55,21 @@ PYTHONPATH=. python service/app.py
 
 ---
 
-## 📡 Exemple d’appel API
+## Exemple d’appel API
 
-### 🔹 Liste des fichiers :
+### Liste des fichiers :
 ```bash
 curl http://localhost:5000/api/files
 ```
 
-### 🔹 Téléchargement d’un fichier :
+### Téléchargement d’un fichier :
 ```bash
 curl -O http://localhost:5000/download/<nom-du-fichier>
 ```
 
 ---
 
-## ✅ Exécuter les tests
+## Exécuter les tests
 
 Créez un environnement virtuel et installez les dépendances :
 
@@ -87,15 +87,11 @@ pytest
 
 ---
 
-## 🧪 Technologies utilisées
+## Technologies utilisées
 
 - Python 3.12
 - Flask
 - Docker
 - Pytest / Unittest
 
----
 
-## 📝 Remarques
-
-> Cette application utilise le serveur de développement Flask. Pour un usage en production, un serveur WSGI (ex : Gunicorn) est recommandé.
