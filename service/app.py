@@ -1,4 +1,3 @@
-#Imports
 from flask import Flask, render_template, jsonify, send_from_directory, abort
 from service import config, status
 import os
@@ -28,12 +27,8 @@ def index():
 @app.route("/api/files")
 def list():
     folder_path = app.config["FOLDER_PATH"]
-    # List all files and directories
     all_items = os.listdir(folder_path)
-
-    # List only files
     files = [f for f in all_items if os.path.isfile(os.path.join(folder_path, f))]
-
     return jsonify(files=files), status.HTTP_200_OK
 
 ######################################################################
