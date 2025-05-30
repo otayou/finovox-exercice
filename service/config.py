@@ -1,3 +1,1 @@
-import os
-
-FOLDER_PATH = os.path.abspath("test_folder")
+FOLDER_PATH = ("/app/files")
