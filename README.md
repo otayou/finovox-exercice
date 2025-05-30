@@ -61,12 +61,18 @@ PYTHONPATH=. python service/app.py
 ```bash
 curl http://localhost:5000/api/files
 ```
+**Réponse JSON attendue :**
+```json
+{
+  "files": ["test1.txt", "image.png", "rapport.pdf"]
+}
+```
 
 ### Téléchargement d’un fichier :
 ```bash
-curl -O http://localhost:5000/download/<nom-du-fichier>
+curl -O http://localhost:5000/download/1.txt
 ```
-
+**Résultat attendu :** le fichier `1.txt` est téléchargé dans le répertoire courant.
 ---
 
 ## Exécuter les tests
