@@ -1,5 +1,5 @@
 # 📦 File Downloader App
-![CI Tests](https://github.com/otayou/finovox-exercice/actions/workflows/python-tests.yml/badge.svg)
+![CI Tests](https://github.com/otayou/finovox-exercice/actions/workflows/ci.yml/badge.svg)
 
 Une application web légère développée en Flask, permettant de **lister** et **télécharger** des fichiers depuis un dossier monté dynamiquement en volume Docker, avec tests automatisés exécutés via GitHub Actions.
 
