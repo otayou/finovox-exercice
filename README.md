@@ -45,7 +45,7 @@ L’application sera accessible sur [http://localhost:5000](http://localhost:500
 
 ---
 
-## ▶️ Exécution locale sans Docker (optionnel)
+## Exécution locale sans Docker (optionnel)
 
 Vous pouvez également exécuter l'application localement (hors conteneur) avec :
 
