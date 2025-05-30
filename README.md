@@ -73,6 +73,7 @@ curl http://localhost:5000/api/files
 curl -O http://localhost:5000/download/1.txt
 ```
 **Résultat attendu :** le fichier `1.txt` est téléchargé dans le répertoire courant.
+
 ---
 
 ## Exécuter les tests
