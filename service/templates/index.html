@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fichiers à télécharger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        a.button {
+            padding: 6px 12px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Liste des fichiers</h1>
+<table id="file-table">
+    <thead>
+        <tr>
+            <th>Nom du fichier</th>
+            <th>Téléchargement</th>
+        </tr>
+    </thead>
+    <tbody id="file-body">
+    </tbody>
+</table>
+
+<script>
+    async function fetchFiles() {
+        const response = await fetch('/api/files');
+        const data = await response.json();
+        const tbody = document.getElementById('file-body');
+
+        data.files.forEach(file => {
+            const row = document.createElement('tr');
+
+            const nameCell = document.createElement('td');
+            nameCell.textContent = file;
+
+            const downloadCell = document.createElement('td');
+            const link = document.createElement('a');
+            link.href = `/download/${file}`;
+            link.textContent = 'Télécharger';
+            link.className = 'button';
+
+            downloadCell.appendChild(link);
+            row.appendChild(nameCell);
+            row.appendChild(downloadCell);
+            tbody.appendChild(row);
+        });
+    }
+
+    window.onload = fetchFiles;
+</script>
+
+</body>
+</html>
